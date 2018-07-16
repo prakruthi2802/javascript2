@@ -62,13 +62,68 @@ function fibonacci()
         output +=" "+c;
         a = b;
         b = c;
-    }
-    
-    
+    } 
 }
- 
   showResult("fibonacci series of:" +num+ " is:"+output);  
 }
+function reverse()
+{
+  var rev = 0;
+    var num = getUserInput();
+
+    while(num != 0){
+        r = num % 10;
+    rev = rev * 10 + r;
+    num =Math.floor(num / 10);
+}   
+  showResult("reverse is:"+rev);   
+
+}
+function palindrome(){
+    var num = getUserInput();
+   var rev = 0;
+    var num2 = num;
+    var num = getUserInput();
+    while(num !=0){
+        r = num % 10;
+    rev = rev * 10 + r;
+    num = Math.floor(num / 10);
+} 
+    if(num2 == rev) {
+           showResult("palindrome");
+       }
+    else{
+        showResult("is not palindrome");
+    }
+      
+}
+function sumofdigits(){
+        var num = getUserInput();
+    var sum=0;
+    while(num !=0)
+        {
+            sum += num % 10;
+            num = Math.floor(num / 10);
+        }
+    
+    showResult("sum of digits:"+sum);   
+}
+
+function sumofsingledigits()
+{
+    var num = getUserInput();
+    var num2;
+    sum = num2;
+    while(num > 9)
+        {
+            sum =Math.floor(num / 10) + num % 10;
+            num =sum ;
+        }
+    showResult("sum of single digits:"+sum);  
+        
+}
+
+
 function getUserInput(){
    var num=document.getElementById("num").value;
     return num;
